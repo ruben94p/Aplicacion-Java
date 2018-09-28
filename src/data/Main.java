@@ -66,7 +66,7 @@ public class Main{
     			user.email = scanner.nextLine();
     			break;
     		case 4:
-    			System.out.println(user.address);
+    			System.out.println(user.address.PrintValue());
     			String temp = scanner.nextLine();
     			if(Address.ValidAddress(temp))
     				user.address = new Address(temp, user.address.geo);

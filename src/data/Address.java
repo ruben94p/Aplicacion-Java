@@ -32,6 +32,10 @@ public class Address{
 		return String.format("%s,%s,%s,%s\t%s\t%s", street, suite, city, zipcode, geo.lat, geo.lng);
 	}
 	
+	public String PrintValue() {
+		return String.format("%s,%s,%s,%s", street, suite, city, zipcode);
+	}
+	
 	public static boolean ValidAddress(String text) {
 		String[] s = text.split(",");
 		return s.length == 4;
