@@ -1,13 +1,13 @@
 package data;
 
-public class Company{
+class Company{
     String name, catchPhrase, bs;
 
-    public Company(){
+    Company(){
 
     }
 
-	public Company(String name, String catchPhrase, String bs) {
+	Company(String name, String catchPhrase, String bs) {
 		super();
 		this.name = name;
 		this.catchPhrase = catchPhrase;

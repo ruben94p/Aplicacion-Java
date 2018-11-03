@@ -1,17 +1,17 @@
 package data;
 
-public class User{
+class User{
     int id;
     String name, username, email, phone, website;
 
     Address address;
     Company company;
 
-    public User(){
+    User(){
 
     }
     
-    public User(int id, String name, String username, String email, String phone,
+    User(int id, String name, String username, String email, String phone,
     		String website, Address address, Company company) {
 		this.id = id;
 		this.name = name;

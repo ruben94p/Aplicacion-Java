@@ -1,5 +1,5 @@
 package data;
-import java.io .*;
+import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
@@ -21,6 +21,10 @@ public class Main{
     	}
     }
     
+    /**
+     * Mostrar opciones y leer la entrada del usuario 
+     * @return bandera que determina si continua la ejecución del programa
+     */
     static boolean Options() {
     	System.out.println("Opciones:\n1 : Editar\n2 : Eliminar\n3 : Exportar a archivo\n4 : Terminar");
     	scanner = new Scanner(System.in);
@@ -41,6 +45,9 @@ public class Main{
     	return false;
     }
     
+    /**
+     * Entrada del ID de usuario y campo a editar
+     */
     static void Edit() {
     	System.out.println("Ingrese el ID del usuario a editar");
     	int id = scanner.nextInt();
@@ -103,6 +110,9 @@ public class Main{
     	}
     }
     
+    /**
+     * Entrada de ID de usuario a eliminar
+     */
     static void Remove() {
     	System.out.println("Ingrese el ID del usuario a eliminar");
     	int id = scanner.nextInt();
@@ -117,6 +127,9 @@ public class Main{
     	}
     }
     
+    /**
+     * Entrada del nombre del archivo a generar con los datos de la lista de usuarios que se tiene en el momento
+     */
     static void Export() {
     	System.out.println("Ingrese el nombre del archivo");
     	scanner = new Scanner(System.in);
@@ -130,6 +143,10 @@ public class Main{
     	}
     }
     
+    /**
+     * Consulta al sitio web con los datos y almacenamiento de estos en una String
+     * @return JSON almacenado en una variable String, null regresado en caso de un error
+     */
     static String DownloadData() {
     	try {
     		URL oracle = new URL("https://jsonplaceholder.typicode.com/users");
